@@ -1,3 +1,4 @@
+import 'package:webfeed_advance/domain/custom_namespace/custom.dart';
 import 'package:webfeed_advance/domain/dublin_core/dublin_core.dart';
 import 'package:webfeed_advance/domain/itunes/itunes.dart';
 import 'package:webfeed_advance/domain/media/media.dart';
@@ -27,24 +28,25 @@ class RssItem {
   final DublinCore? dc;
   final Itunes? itunes;
   final PodcastItem? podcast;
+  final CustomNamespace? customNamespace;
 
-  RssItem({
-    this.title,
-    this.description,
-    this.link,
-    this.categories,
-    this.guid,
-    this.pubDate,
-    this.author,
-    this.comments,
-    this.source,
-    this.content,
-    this.media,
-    this.enclosure,
-    this.dc,
-    this.itunes,
-    this.podcast,
-  });
+  RssItem(
+      {this.title,
+      this.description,
+      this.link,
+      this.categories,
+      this.guid,
+      this.pubDate,
+      this.author,
+      this.comments,
+      this.source,
+      this.content,
+      this.media,
+      this.enclosure,
+      this.dc,
+      this.itunes,
+      this.podcast,
+      this.customNamespace});
 
   factory RssItem.parse(XmlElement element) {
     return RssItem(
@@ -75,6 +77,7 @@ class RssItem {
       dc: DublinCore.parse(element),
       itunes: Itunes.parse(element),
       podcast: PodcastItem.parse(element),
+      customNamespace: CustomNamespace.parse(element),
     );
   }
 }
