@@ -1,4 +1,4 @@
-import 'package:webfeed/domain/podcast/podcast_value_recipient.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_value_recipient.dart';
 import 'package:xml/xml.dart';
 
 // https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#value

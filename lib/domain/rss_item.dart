@@ -1,12 +1,13 @@
-import 'package:webfeed/domain/dublin_core/dublin_core.dart';
-import 'package:webfeed/domain/itunes/itunes.dart';
-import 'package:webfeed/domain/media/media.dart';
-import 'package:webfeed/domain/rss_category.dart';
-import 'package:webfeed/domain/rss_content.dart';
-import 'package:webfeed/domain/rss_enclosure.dart';
-import 'package:webfeed/domain/rss_source.dart';
-import 'package:webfeed/util/datetime.dart';
-import 'package:webfeed/util/iterable.dart';
+import 'package:webfeed_advance/domain/dublin_core/dublin_core.dart';
+import 'package:webfeed_advance/domain/itunes/itunes.dart';
+import 'package:webfeed_advance/domain/media/media.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_item.dart';
+import 'package:webfeed_advance/domain/rss_category.dart';
+import 'package:webfeed_advance/domain/rss_content.dart';
+import 'package:webfeed_advance/domain/rss_enclosure.dart';
+import 'package:webfeed_advance/domain/rss_source.dart';
+import 'package:webfeed_advance/util/datetime.dart';
+import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 class RssItem {
@@ -25,7 +26,7 @@ class RssItem {
   final RssEnclosure? enclosure;
   final DublinCore? dc;
   final Itunes? itunes;
-  final PodcastItem podcast;
+  final PodcastItem? podcast;
 
   RssItem({
     this.title,
@@ -42,7 +43,7 @@ class RssItem {
     this.enclosure,
     this.dc,
     this.itunes,
-    required this.podcast,
+    this.podcast,
   });
 
   factory RssItem.parse(XmlElement element) {

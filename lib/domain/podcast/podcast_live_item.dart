@@ -1,4 +1,4 @@
-import 'package:webfeed/domain/rss_item.dart';
+import 'package:webfeed_advance/domain/rss_item.dart';
 import 'package:xml/xml.dart';
 
 enum LiveItemStatus { pending, live, ended }

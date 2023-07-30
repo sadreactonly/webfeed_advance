@@ -1,15 +1,15 @@
-import 'package:webfeed/domain/media/license.dart';
-import 'package:webfeed/domain/podcast/podcast_funding.dart';
-import 'package:webfeed/domain/podcast/podcast_guid.dart';
-import 'package:webfeed/domain/podcast/podcast_images.dart';
-import 'package:webfeed/domain/podcast/podcast_live_item.dart';
-import 'package:webfeed/domain/podcast/podcast_location.dart';
-import 'package:webfeed/domain/podcast/podcast_locked.dart';
-import 'package:webfeed/domain/podcast/podcast_medium.dart';
-import 'package:webfeed/domain/podcast/podcast_person.dart';
-import 'package:webfeed/domain/podcast/podcast_trailer.dart';
-import 'package:webfeed/domain/podcast/podcast_value.dart';
-import 'package:webfeed/util/iterable.dart';
+import 'package:webfeed_advance/domain/media/license.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_funding.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_guid.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_images.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_live_item.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_location.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_locked.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_medium.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_person.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_trailer.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_value.dart';
+import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 class Podcast {

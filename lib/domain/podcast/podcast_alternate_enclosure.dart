@@ -1,12 +1,12 @@
-import 'package:webfeed/domain/podcast/podcast_integrity.dart';
-import 'package:webfeed/domain/podcast/podcast_source.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_integrity.dart';
+import 'package:webfeed_advance/domain/podcast/podcast_source.dart';
 import 'package:xml/xml.dart';
 
 // https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#alternate-enclosure
 class AlternateEnclosure {
   final String? type;
   final int? length;
-  final int? bitrate;
+  final double? bitrate;
   final int? height;
   final String? lang;
   final String? title;
@@ -37,7 +37,7 @@ class AlternateEnclosure {
     return AlternateEnclosure(
       type: element.getAttribute('type'),
       length: lengthStr == null ? null : int.tryParse(lengthStr),
-      bitrate: bitrateStr == null ? null : int.tryParse(bitrateStr),
+      bitrate: bitrateStr == null ? null : double.tryParse(bitrateStr),
       height: heightStr == null ? null : int.tryParse(heightStr),
       lang: element.getAttribute('lang'),
       title: element.getAttribute('title'),
