@@ -1,5 +1,5 @@
-import 'package:webfeed/util/datetime.dart';
-import 'package:webfeed/util/iterable.dart';
+import 'package:webfeed_advance/util/datetime.dart';
+import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 class DublinCore {

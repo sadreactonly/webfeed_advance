@@ -1,12 +1,13 @@
-import 'package:webfeed/domain/dublin_core/dublin_core.dart';
-import 'package:webfeed/domain/itunes/itunes.dart';
-import 'package:webfeed/domain/media/media.dart';
-import 'package:webfeed/domain/rss_category.dart';
-import 'package:webfeed/domain/rss_content.dart';
-import 'package:webfeed/domain/rss_enclosure.dart';
-import 'package:webfeed/domain/rss_source.dart';
-import 'package:webfeed/util/datetime.dart';
-import 'package:webfeed/util/iterable.dart';
+import 'package:webfeed_advance/domain/custom_namespace/custom.dart';
+import 'package:webfeed_advance/domain/dublin_core/dublin_core.dart';
+import 'package:webfeed_advance/domain/itunes/itunes.dart';
+import 'package:webfeed_advance/domain/media/media.dart';
+import 'package:webfeed_advance/domain/rss_category.dart';
+import 'package:webfeed_advance/domain/rss_content.dart';
+import 'package:webfeed_advance/domain/rss_enclosure.dart';
+import 'package:webfeed_advance/domain/rss_source.dart';
+import 'package:webfeed_advance/util/datetime.dart';
+import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 class RssItem {
@@ -25,23 +26,24 @@ class RssItem {
   final RssEnclosure? enclosure;
   final DublinCore? dc;
   final Itunes? itunes;
+  final CustomNamespace? customNamespace;
 
-  RssItem({
-    this.title,
-    this.description,
-    this.link,
-    this.categories,
-    this.guid,
-    this.pubDate,
-    this.author,
-    this.comments,
-    this.source,
-    this.content,
-    this.media,
-    this.enclosure,
-    this.dc,
-    this.itunes,
-  });
+  RssItem(
+      {this.title,
+      this.description,
+      this.link,
+      this.categories,
+      this.guid,
+      this.pubDate,
+      this.author,
+      this.comments,
+      this.source,
+      this.content,
+      this.media,
+      this.enclosure,
+      this.dc,
+      this.itunes,
+      this.customNamespace});
 
   factory RssItem.parse(XmlElement element) {
     return RssItem(
@@ -71,6 +73,7 @@ class RssItem {
           .firstOrNull,
       dc: DublinCore.parse(element),
       itunes: Itunes.parse(element),
+      customNamespace: CustomNamespace.parse(element),
     );
   }
 }

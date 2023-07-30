@@ -1,10 +1,10 @@
-import 'package:webfeed/domain/atom_category.dart';
-import 'package:webfeed/domain/atom_generator.dart';
-import 'package:webfeed/domain/atom_item.dart';
-import 'package:webfeed/domain/atom_link.dart';
-import 'package:webfeed/domain/atom_person.dart';
-import 'package:webfeed/util/datetime.dart';
-import 'package:webfeed/util/iterable.dart';
+import 'package:webfeed_advance/domain/atom_category.dart';
+import 'package:webfeed_advance/domain/atom_generator.dart';
+import 'package:webfeed_advance/domain/atom_item.dart';
+import 'package:webfeed_advance/domain/atom_link.dart';
+import 'package:webfeed_advance/domain/atom_person.dart';
+import 'package:webfeed_advance/util/datetime.dart';
+import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 class AtomFeed {

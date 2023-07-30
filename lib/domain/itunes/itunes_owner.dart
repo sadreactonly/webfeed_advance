@@ -1,4 +1,4 @@
-import 'package:webfeed/util/iterable.dart';
+import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 class ItunesOwner {

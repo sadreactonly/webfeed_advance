@@ -1,13 +1,13 @@
 import 'dart:core';
 
-import 'package:webfeed/domain/dublin_core/dublin_core.dart';
-import 'package:webfeed/domain/itunes/itunes.dart';
-import 'package:webfeed/domain/rss_category.dart';
-import 'package:webfeed/domain/rss_cloud.dart';
-import 'package:webfeed/domain/rss_image.dart';
-import 'package:webfeed/domain/rss_item.dart';
-import 'package:webfeed/domain/syndication/syndication.dart';
-import 'package:webfeed/util/iterable.dart';
+import 'package:webfeed_advance/domain/dublin_core/dublin_core.dart';
+import 'package:webfeed_advance/domain/itunes/itunes.dart';
+import 'package:webfeed_advance/domain/rss_category.dart';
+import 'package:webfeed_advance/domain/rss_cloud.dart';
+import 'package:webfeed_advance/domain/rss_image.dart';
+import 'package:webfeed_advance/domain/rss_item.dart';
+import 'package:webfeed_advance/domain/syndication/syndication.dart';
+import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 class RssFeed {
