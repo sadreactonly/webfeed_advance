@@ -1,4 +1,4 @@
-import 'package:webfeed_advance/domain/podcast/podcast_value_recipient.dart';
+import 'package:webfeed_advanced/domain/podcast/podcast_value_recipient.dart';
 import 'package:xml/xml.dart';
 
 /// Represents a value with type, method, suggested, and valueRecipients attributes.

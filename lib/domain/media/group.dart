@@ -1,11 +1,11 @@
-import 'package:webfeed_advance/domain/media/category.dart';
-import 'package:webfeed_advance/domain/media/content.dart';
-import 'package:webfeed_advance/domain/media/credit.dart';
-import 'package:webfeed_advance/domain/media/description.dart';
-import 'package:webfeed_advance/domain/media/rating.dart';
-import 'package:webfeed_advance/domain/media/thumbnail.dart';
-import 'package:webfeed_advance/domain/media/title.dart';
-import 'package:webfeed_advance/util/iterable.dart';
+import 'package:webfeed_advanced/domain/media/category.dart';
+import 'package:webfeed_advanced/domain/media/content.dart';
+import 'package:webfeed_advanced/domain/media/credit.dart';
+import 'package:webfeed_advanced/domain/media/description.dart';
+import 'package:webfeed_advanced/domain/media/rating.dart';
+import 'package:webfeed_advanced/domain/media/thumbnail.dart';
+import 'package:webfeed_advanced/domain/media/title.dart';
+import 'package:webfeed_advanced/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 /// Represents the "media:group" element in an XML document.

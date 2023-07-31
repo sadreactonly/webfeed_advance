@@ -5,7 +5,7 @@ import 'package:test/test.dart';
 // import 'package:webfeed/domain/itunes/itunes_episode_type.dart';
 // import 'package:webfeed/domain/itunes/itunes_type.dart';
 // import 'package:webfeed/domain/syndication/syndication.dart';
-import 'package:webfeed_advance/webfeed.dart';
+import 'package:webfeed_advanced/webfeed.dart';
 
 void main() {
   test('Loads tags into customNamespace map.xml', () {

@@ -1,10 +1,10 @@
-import 'package:webfeed_advance/domain/atom/atom_category.dart';
-import 'package:webfeed_advance/domain/atom/atom_link.dart';
-import 'package:webfeed_advance/domain/atom/atom_person.dart';
-import 'package:webfeed_advance/domain/atom/atom_source.dart';
-import 'package:webfeed_advance/domain/media/media.dart';
-import 'package:webfeed_advance/util/datetime.dart';
-import 'package:webfeed_advance/util/iterable.dart';
+import 'package:webfeed_advanced/domain/atom/atom_category.dart';
+import 'package:webfeed_advanced/domain/atom/atom_link.dart';
+import 'package:webfeed_advanced/domain/atom/atom_person.dart';
+import 'package:webfeed_advanced/domain/atom/atom_source.dart';
+import 'package:webfeed_advanced/domain/media/media.dart';
+import 'package:webfeed_advanced/util/datetime.dart';
+import 'package:webfeed_advanced/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 /// Represents an item in an Atom feed.

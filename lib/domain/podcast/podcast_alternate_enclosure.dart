@@ -1,5 +1,5 @@
-import 'package:webfeed_advance/domain/podcast/podcast_integrity.dart';
-import 'package:webfeed_advance/domain/podcast/podcast_source.dart';
+import 'package:webfeed_advanced/domain/podcast/podcast_integrity.dart';
+import 'package:webfeed_advanced/domain/podcast/podcast_source.dart';
 import 'package:xml/xml.dart';
 
 /// Represents an alternate enclosure in a podcast episode or item.

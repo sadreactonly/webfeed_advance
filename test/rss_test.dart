@@ -2,12 +2,12 @@ import 'dart:core';
 import 'dart:io';
 
 import 'package:test/test.dart';
-import 'package:webfeed_advance/domain/itunes/itunes_episode_type.dart';
-import 'package:webfeed_advance/domain/itunes/itunes_type.dart';
-import 'package:webfeed_advance/domain/podcast/podcast_live_item.dart';
-import 'package:webfeed_advance/domain/podcast/podcast_medium.dart';
-import 'package:webfeed_advance/domain/syndication/syndication.dart';
-import 'package:webfeed_advance/webfeed.dart';
+import 'package:webfeed_advanced/domain/itunes/itunes_episode_type.dart';
+import 'package:webfeed_advanced/domain/itunes/itunes_type.dart';
+import 'package:webfeed_advanced/domain/podcast/podcast_live_item.dart';
+import 'package:webfeed_advanced/domain/podcast/podcast_medium.dart';
+import 'package:webfeed_advanced/domain/syndication/syndication.dart';
+import 'package:webfeed_advanced/webfeed.dart';
 
 void main() {
   test('parse Invalid.xml', () {

@@ -1,14 +1,14 @@
-import 'package:webfeed_advance/domain/custom_namespace/custom.dart';
-import 'package:webfeed_advance/domain/dublin_core/dublin_core.dart';
-import 'package:webfeed_advance/domain/itunes/itunes.dart';
-import 'package:webfeed_advance/domain/media/media.dart';
-import 'package:webfeed_advance/domain/podcast/podcast_item.dart';
-import 'package:webfeed_advance/domain/rss/rss_category.dart';
-import 'package:webfeed_advance/domain/rss/rss_content.dart';
-import 'package:webfeed_advance/domain/rss/rss_enclosure.dart';
-import 'package:webfeed_advance/domain/rss/rss_source.dart';
-import 'package:webfeed_advance/util/datetime.dart';
-import 'package:webfeed_advance/util/iterable.dart';
+import 'package:webfeed_advanced/domain/custom_namespace/custom.dart';
+import 'package:webfeed_advanced/domain/dublin_core/dublin_core.dart';
+import 'package:webfeed_advanced/domain/itunes/itunes.dart';
+import 'package:webfeed_advanced/domain/media/media.dart';
+import 'package:webfeed_advanced/domain/podcast/podcast_item.dart';
+import 'package:webfeed_advanced/domain/rss/rss_category.dart';
+import 'package:webfeed_advanced/domain/rss/rss_content.dart';
+import 'package:webfeed_advanced/domain/rss/rss_enclosure.dart';
+import 'package:webfeed_advanced/domain/rss/rss_source.dart';
+import 'package:webfeed_advanced/util/datetime.dart';
+import 'package:webfeed_advanced/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 /// Represents an item within an RSS feed.

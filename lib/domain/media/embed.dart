@@ -1,4 +1,4 @@
-import 'package:webfeed_advance/domain/media/param.dart';
+import 'package:webfeed_advanced/domain/media/param.dart';
 import 'package:xml/xml.dart';
 
 /// Represents the "embed" element in an XML document.

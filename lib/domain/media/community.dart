@@ -1,7 +1,7 @@
-import 'package:webfeed_advance/domain/media/star_rating.dart';
-import 'package:webfeed_advance/domain/media/statistics.dart';
-import 'package:webfeed_advance/domain/media/tags.dart';
-import 'package:webfeed_advance/util/iterable.dart';
+import 'package:webfeed_advanced/domain/media/star_rating.dart';
+import 'package:webfeed_advanced/domain/media/statistics.dart';
+import 'package:webfeed_advanced/domain/media/tags.dart';
+import 'package:webfeed_advanced/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 /// Represents the "media:community" element in a media namespace commonly found in RSS feeds.

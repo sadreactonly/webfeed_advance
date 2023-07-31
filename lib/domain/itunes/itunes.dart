@@ -1,10 +1,10 @@
-import 'package:webfeed_advance/domain/itunes/itunes_category.dart';
-import 'package:webfeed_advance/domain/itunes/itunes_episode_type.dart';
-import 'package:webfeed_advance/domain/itunes/itunes_image.dart';
-import 'package:webfeed_advance/domain/itunes/itunes_owner.dart';
-import 'package:webfeed_advance/domain/itunes/itunes_type.dart';
-import 'package:webfeed_advance/util/iterable.dart';
-import 'package:webfeed_advance/util/xml.dart';
+import 'package:webfeed_advanced/domain/itunes/itunes_category.dart';
+import 'package:webfeed_advanced/domain/itunes/itunes_episode_type.dart';
+import 'package:webfeed_advanced/domain/itunes/itunes_image.dart';
+import 'package:webfeed_advanced/domain/itunes/itunes_owner.dart';
+import 'package:webfeed_advanced/domain/itunes/itunes_type.dart';
+import 'package:webfeed_advanced/util/iterable.dart';
+import 'package:webfeed_advanced/util/xml.dart';
 import 'package:xml/xml.dart';
 
 /// Represents iTunes-specific metadata for a feed or an episode.

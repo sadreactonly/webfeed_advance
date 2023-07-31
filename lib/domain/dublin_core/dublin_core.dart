@@ -1,5 +1,5 @@
-import 'package:webfeed_advance/util/datetime.dart';
-import 'package:webfeed_advance/util/iterable.dart';
+import 'package:webfeed_advanced/util/datetime.dart';
+import 'package:webfeed_advanced/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 /// Represents the Dublin Core metadata for a feed item.

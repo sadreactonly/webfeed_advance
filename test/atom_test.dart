@@ -2,7 +2,7 @@ import 'dart:core';
 import 'dart:io';
 
 import 'package:test/test.dart';
-import 'package:webfeed_advance/webfeed.dart';
+import 'package:webfeed_advanced/webfeed.dart';
 
 void main() {
   test('parse Invalid.xml', () {

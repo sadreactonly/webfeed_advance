@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:http/io_client.dart';
-import 'package:webfeed_advance/webfeed.dart';
+import 'package:webfeed_advanced/webfeed.dart';
 
 void main() async {
   final client = IOClient(HttpClient()

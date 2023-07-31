@@ -1,4 +1,4 @@
-import 'package:webfeed_advance/domain/rss/rss_item.dart';
+import 'package:webfeed_advanced/domain/rss/rss_item.dart';
 import 'package:xml/xml.dart';
 
 /// Enum representing different live item statuses.

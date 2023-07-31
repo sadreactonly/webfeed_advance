@@ -1,4 +1,4 @@
-import 'package:webfeed_advance/util/iterable.dart';
+import 'package:webfeed_advanced/util/iterable.dart';
 import 'package:xml/xml.dart';
 
 /// Represents a scene with title, description, startTime, and endTime attributes.
