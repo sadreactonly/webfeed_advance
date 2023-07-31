@@ -16,7 +16,7 @@ class CustomNamespace {
       customTags.addEntries([
         MapEntry(
           descendantElement.name.toString(),
-          descendantElement.text,
+          descendantElement.innerText,
         ),
       ]);
     });

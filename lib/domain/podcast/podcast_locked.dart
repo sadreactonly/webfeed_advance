@@ -12,7 +12,7 @@ class Locked {
 
   factory Locked.parse(XmlElement element) {
     bool? valueBool;
-    switch (element.text.toLowerCase()) {
+    switch (element.innerText.toLowerCase()) {
       case 'yes':
         valueBool = true;
         break;

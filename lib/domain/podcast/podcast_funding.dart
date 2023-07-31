@@ -13,7 +13,7 @@ class Funding {
   factory Funding.parse(XmlElement element) {
     return Funding(
       url: element.getAttribute('url'),
-      value: element.text,
+      value: element.innerText,
     );
   }
 }

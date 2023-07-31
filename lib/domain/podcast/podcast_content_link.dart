@@ -13,7 +13,7 @@ class ContentLink {
   factory ContentLink.parse(XmlElement element) {
     return ContentLink(
       href: element.getAttribute('href'),
-      value: element.text,
+      value: element.innerText,
     );
   }
 }

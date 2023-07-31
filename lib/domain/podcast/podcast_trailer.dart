@@ -27,7 +27,7 @@ class Trailer {
       length: lengthStr == null ? null : int.tryParse(lengthStr),
       type: element.getAttribute('type'),
       season: seasonStr == null ? null : int.tryParse(seasonStr),
-      value: element.text,
+      value: element.innerText,
     );
   }
 }

@@ -12,7 +12,7 @@ class License {
       type: element.getAttribute('type'),
       href: element.getAttribute('href'),
       url: element.getAttribute('url'),
-      value: element.text,
+      value: element.innerText,
     );
   }
 }

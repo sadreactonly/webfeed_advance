@@ -13,7 +13,7 @@ class Episode {
   factory Episode.parse(XmlElement element) {
     return Episode(
       display: element.getAttribute('display'),
-      value: double.tryParse(element.text),
+      value: double.tryParse(element.innerText),
     );
   }
 }

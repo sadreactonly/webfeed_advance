@@ -10,7 +10,7 @@ class Guid {
 
   factory Guid.parse(XmlElement element) {
     return Guid(
-      value: element.text,
+      value: element.innerText,
     );
   }
 }

@@ -18,7 +18,7 @@ class Soundbite {
     return Soundbite(
       startTime: startTimeStr != null ? double.tryParse(startTimeStr) : null,
       duration: durationStr != null ? double.tryParse(durationStr) : null,
-      value: element.text,
+      value: element.innerText,
     );
   }
 }

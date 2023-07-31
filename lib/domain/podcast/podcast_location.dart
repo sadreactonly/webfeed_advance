@@ -16,7 +16,7 @@ class Location {
     return Location(
       geo: element.getAttribute('geo'),
       osm: element.getAttribute('osm'),
-      value: element.text,
+      value: element.innerText,
     );
   }
 }

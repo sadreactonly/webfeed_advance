@@ -13,7 +13,7 @@ class Season {
   factory Season.parse(XmlElement element) {
     return Season(
       name: element.getAttribute('name'),
-      value: int.tryParse(element.text),
+      value: int.tryParse(element.innerText),
     );
   }
 }

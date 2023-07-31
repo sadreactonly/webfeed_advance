@@ -9,8 +9,8 @@ class ItunesOwner {
 
   factory ItunesOwner.parse(XmlElement element) {
     return ItunesOwner(
-      name: element.findElements('itunes:name').firstOrNull?.text.trim(),
-      email: element.findElements('itunes:email').firstOrNull?.text.trim(),
+      name: element.findElements('itunes:name').firstOrNull?.innerText.trim(),
+      email: element.findElements('itunes:email').firstOrNull?.innerText.trim(),
     );
   }
 }

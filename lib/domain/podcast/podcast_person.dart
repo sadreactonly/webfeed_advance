@@ -22,7 +22,7 @@ class Person {
       group: element.getAttribute('group'),
       img: element.getAttribute('img'),
       href: element.getAttribute('href'),
-      value: element.text,
+      value: element.innerText,
     );
   }
 }

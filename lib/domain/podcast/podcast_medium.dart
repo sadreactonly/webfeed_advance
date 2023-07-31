@@ -12,7 +12,7 @@ class Medium {
 
   factory Medium.parse(XmlElement element) {
     return Medium(
-      value: newPodcastMediumType(element.text),
+      value: newPodcastMediumType(element.innerText),
     );
   }
 }
