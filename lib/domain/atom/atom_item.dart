@@ -1,7 +1,7 @@
-import 'package:webfeed_advance/domain/atom_category.dart';
-import 'package:webfeed_advance/domain/atom_link.dart';
-import 'package:webfeed_advance/domain/atom_person.dart';
-import 'package:webfeed_advance/domain/atom_source.dart';
+import 'package:webfeed_advance/domain/atom/atom_category.dart';
+import 'package:webfeed_advance/domain/atom/atom_link.dart';
+import 'package:webfeed_advance/domain/atom/atom_person.dart';
+import 'package:webfeed_advance/domain/atom/atom_source.dart';
 import 'package:webfeed_advance/domain/media/media.dart';
 import 'package:webfeed_advance/util/datetime.dart';
 import 'package:webfeed_advance/util/iterable.dart';

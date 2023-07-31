@@ -1,8 +1,8 @@
-import 'package:webfeed_advance/domain/atom_category.dart';
-import 'package:webfeed_advance/domain/atom_generator.dart';
-import 'package:webfeed_advance/domain/atom_item.dart';
-import 'package:webfeed_advance/domain/atom_link.dart';
-import 'package:webfeed_advance/domain/atom_person.dart';
+import 'package:webfeed_advance/domain/atom/atom_category.dart';
+import 'package:webfeed_advance/domain/atom/atom_generator.dart';
+import 'package:webfeed_advance/domain/atom/atom_item.dart';
+import 'package:webfeed_advance/domain/atom/atom_link.dart';
+import 'package:webfeed_advance/domain/atom/atom_person.dart';
 import 'package:webfeed_advance/util/datetime.dart';
 import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
@@ -12,7 +12,6 @@ class AtomFeed {
   final String? title;
   final DateTime? updated;
   final List<AtomItem>? items;
-
   final List<AtomLink>? links;
   final List<AtomPerson>? authors;
   final List<AtomPerson>? contributors;
@@ -46,6 +45,14 @@ class AtomFeed {
       throw ArgumentError('feed not found');
     }
 
+    return AtomFeed._fromXml(feedElement);
+  }
+
+  factory AtomFeed.fromXml(XmlElement feedElement) {
+    return AtomFeed._fromXml(feedElement);
+  }
+
+  factory AtomFeed._fromXml(XmlElement feedElement) {
     return AtomFeed(
       id: feedElement.findElements('id').firstOrNull?.text,
       title: feedElement.findElements('title').firstOrNull?.text,
