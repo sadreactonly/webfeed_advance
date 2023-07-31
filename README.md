@@ -14,12 +14,13 @@ A dart package for parsing RSS and Atom feed.
     - [x] Dublin Core
     - [x] iTunes
     - [x] Syndication
-
+    - [x] Podcast
+    - [x] Custom namespace
 ### Installing
 
 Add this line into your `pubspec.yaml`
 ```
-webfeed: ^0.7.0
+webfeed: ^0.0.1
 ```
 
 Import the package into your dart code using:
