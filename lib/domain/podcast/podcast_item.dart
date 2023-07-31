@@ -13,20 +13,61 @@ import 'package:webfeed_advance/domain/podcast/podcast_value.dart';
 import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
+/// Represents a podcast item with various attributes such as transcript, chapters, soundbites, people, etc.
+///
+/// The `PodcastItem` class corresponds to the `podcast:item` element in the podcast namespace.
 class PodcastItem {
+  /// The transcript associated with the podcast item.
   final Transcript? transcript;
+
+  /// The chapters associated with the podcast item.
   final Chapters? chapters;
+
+  /// The list of soundbites associated with the podcast item.
   final List<Soundbite> soundbites;
+
+  /// The list of people associated with the podcast item.
   final List<Person> people;
+
+  /// The location associated with the podcast item.
   final Location? location;
+
+  /// The season associated with the podcast item.
   final Season? season;
+
+  /// The episode associated with the podcast item.
   final Episode? episode;
+
+  /// The license associated with the podcast item.
   final License? license;
+
+  /// The list of alternate enclosures associated with the podcast item.
   final List<AlternateEnclosure> alternateEnclosures;
+
+  /// The value associated with the podcast item.
   final Value? value;
+
+  /// The images associated with the podcast item.
   final Images? images;
+
+  /// The list of content links associated with the podcast item.
   final List<ContentLink> contentLinks;
 
+  /// Constructor for creating a [PodcastItem] object.
+  ///
+  /// The constructor initializes a [PodcastItem] object with optional named parameters:
+  /// - [transcript]: The transcript associated with the podcast item.
+  /// - [chapters]: The chapters associated with the podcast item.
+  /// - [soundbites]: The list of soundbites associated with the podcast item.
+  /// - [people]: The list of people associated with the podcast item.
+  /// - [location]: The location associated with the podcast item.
+  /// - [season]: The season associated with the podcast item.
+  /// - [episode]: The episode associated with the podcast item.
+  /// - [license]: The license associated with the podcast item.
+  /// - [alternateEnclosures]: The list of alternate enclosures associated with the podcast item.
+  /// - [value]: The value associated with the podcast item.
+  /// - [images]: The images associated with the podcast item.
+  /// - [contentLinks]: The list of content links associated with the podcast item.
   PodcastItem({
     this.transcript,
     this.chapters,
@@ -42,6 +83,11 @@ class PodcastItem {
     required this.contentLinks,
   });
 
+  /// Factory method to parse an [XmlElement] and create a [PodcastItem] object from it.
+  ///
+  /// The [element] is an XML element containing the podcast item information.
+  ///
+  /// Returns the parsed [PodcastItem] object.
   factory PodcastItem.parse(XmlElement element) {
     return PodcastItem(
       transcript: element

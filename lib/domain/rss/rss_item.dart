@@ -11,6 +11,7 @@ import 'package:webfeed_advance/util/datetime.dart';
 import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
+/// Represents an item within an RSS feed.
 class RssItem {
   final String? title;
   final String? description;
@@ -30,24 +31,37 @@ class RssItem {
   final PodcastItem? podcast;
   final CustomNamespace? customNamespace;
 
-  RssItem(
-      {this.title,
-      this.description,
-      this.link,
-      this.categories,
-      this.guid,
-      this.pubDate,
-      this.author,
-      this.comments,
-      this.source,
-      this.content,
-      this.media,
-      this.enclosure,
-      this.dc,
-      this.itunes,
-      this.podcast,
-      this.customNamespace});
+  /// Constructor for the `RssItem` class.
+  ///
+  /// Initialize the RSS item properties such as [title], [description], [link], [categories], [guid], [pubDate],
+  /// [author], [comments], [source], [content], [media], [enclosure], [dc], [itunes], [podcast], and [customNamespace].
+  RssItem({
+    this.title,
+    this.description,
+    this.link,
+    this.categories,
+    this.guid,
+    this.pubDate,
+    this.author,
+    this.comments,
+    this.source,
+    this.content,
+    this.media,
+    this.enclosure,
+    this.dc,
+    this.itunes,
+    this.podcast,
+    this.customNamespace,
+  });
 
+  /// Factory method to create an `RssItem` object from an [XmlElement].
+  ///
+  /// This method parses the [element] and extracts the relevant information from it
+  /// to create an `RssItem` object and returns it.
+  ///
+  /// The extracted information includes the title, description, link, categories, GUID, publication date,
+  /// author, comments, source, content, media, enclosure, Dublin Core metadata, iTunes metadata, podcast metadata,
+  /// and custom namespace metadata.
   factory RssItem.parse(XmlElement element) {
     return RssItem(
       title: element.findElements('title').firstOrNull?.innerText,

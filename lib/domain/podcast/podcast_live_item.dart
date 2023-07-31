@@ -1,15 +1,32 @@
 import 'package:webfeed_advance/domain/rss/rss_item.dart';
 import 'package:xml/xml.dart';
 
+/// Enum representing different live item statuses.
 enum LiveItemStatus { pending, live, ended }
 
-// https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#live-item
+/// Represents a live item with status, start, end, and item attributes.
+///
+/// The `LiveItem` class corresponds to the `live-item` element in the podcast namespace.
 class LiveItem {
+  /// The status of the live item represented by a [LiveItemStatus] enum.
   final LiveItemStatus? status;
+
+  /// The start time of the live item.
   final DateTime? start;
+
+  /// The end time of the live item.
   final DateTime? end;
+
+  /// The [RssItem] associated with the live item.
   final RssItem item;
 
+  /// Constructor for creating a [LiveItem] object.
+  ///
+  /// The constructor initializes a [LiveItem] object with optional named parameters:
+  /// - [status]: The status of the live item represented by a [LiveItemStatus] enum.
+  /// - [start]: The start time of the live item.
+  /// - [end]: The end time of the live item.
+  /// - [item]: The [RssItem] associated with the live item.
   LiveItem({
     this.status,
     this.start,
@@ -17,11 +34,16 @@ class LiveItem {
     required this.item,
   });
 
+  /// Factory method to parse an [XmlElement] and create a [LiveItem] object from it.
+  ///
+  /// The [element] is an XML element containing the live item information.
+  ///
+  /// Returns the parsed [LiveItem] object.
   factory LiveItem.parse(XmlElement element) {
     final startStr = element.getAttribute('start');
     final endStr = element.getAttribute('end');
     return LiveItem(
-      status: newPodcastLiveItemStatusType(element.getAttribute('status')),
+      status: _parseLiveItemStatusType(element.getAttribute('status')),
       start: startStr == null ? null : DateTime.tryParse(startStr),
       end: endStr == null ? null : DateTime.tryParse(endStr),
       item: RssItem.parse(element),
@@ -29,7 +51,8 @@ class LiveItem {
   }
 }
 
-LiveItemStatus? newPodcastLiveItemStatusType(String? value) {
+/// Parses the [value] string and returns the corresponding [LiveItemStatus].
+LiveItemStatus? _parseLiveItemStatusType(String? value) {
   switch (value) {
     case 'pending':
       return LiveItemStatus.pending;

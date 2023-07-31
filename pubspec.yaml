@@ -1,6 +1,6 @@
 name: webfeed_advance
 version: 0.0.1
-description: webfeed is a dart package for parsing RSS and Atom feeds. Media, DublinCore, iTunes, Syndication namespaces are also supported.
+description: webfeed_advance is a dart package for parsing RSS and Atom feeds. Media, DublinCore, iTunes, Syndication, Podcast and Custom namespaces are also supported.
 homepage: https://github.com/sadreactonly/webfeed_advance
 environment:
   sdk: '>=3.0.2 <4.0.0'

@@ -11,6 +11,7 @@ import 'package:webfeed_advance/domain/syndication/syndication.dart';
 import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
+/// Represents an RSS feed.
 class RssFeed {
   final String? title;
   final String? author;
@@ -37,6 +38,11 @@ class RssFeed {
   final Syndication? syndication;
   final Podcast? podcast;
 
+  /// Constructor for the `RssFeed` class.
+  ///
+  /// Initialize the RSS feed properties such as [title], [author], [description], [link], [items], [image], [cloud],
+  /// [categories], [skipDays], [skipHours], [lastBuildDate], [language], [generator], [copyright], [docs],
+  /// [managingEditor], [rating], [webMaster], [ttl], [dc], [itunes], [syndication], and [podcast].
   RssFeed({
     this.title,
     this.author,
@@ -63,6 +69,15 @@ class RssFeed {
     this.podcast,
   });
 
+  /// Factory method to create an `RssFeed` object from an XML string representing an RSS feed.
+  ///
+  /// This method parses the [xmlString] and extracts the relevant information from it
+  /// to create an `RssFeed` object and returns it.
+  ///
+  /// The extracted information includes the title, author, description, link, items, image, cloud,
+  /// categories, skip days, skip hours, last build date, language, generator, copyright, docs,
+  /// managing editor, rating, web master, time-to-live (ttl), Dublin Core metadata, iTunes metadata,
+  /// syndication metadata, and podcast metadata.
   factory RssFeed.parse(String xmlString) {
     var document = XmlDocument.parse(xmlString);
     var rss = document.findElements('rss').firstOrNull;

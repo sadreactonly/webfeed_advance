@@ -12,19 +12,57 @@ import 'package:webfeed_advance/domain/podcast/podcast_value.dart';
 import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
+/// Represents a podcast feed with various metadata and items.
+///
+/// The `Podcast` class corresponds to the root element of the podcast namespace.
 class Podcast {
+  /// The locked status of the podcast.
   final Locked? locked;
+
+  /// The funding information of the podcast.
   final Funding? funding;
+
+  /// The list of people associated with the podcast.
   final List<Person> people;
+
+  /// The location information of the podcast.
   final Location? location;
+
+  /// The list of trailers associated with the podcast.
   final List<Trailer> trailers;
+
+  /// The license information of the podcast.
   final License? license;
+
+  /// The GUID (Globally Unique Identifier) of the podcast.
   final Guid? guid;
+
+  /// The value associated with the podcast.
   final Value? value;
+
+  /// The medium type of the podcast.
   final Medium? medium;
+
+  /// The images associated with the podcast.
   final Images? images;
+
+  /// The list of live items associated with the podcast.
   final List<LiveItem> liveItems;
 
+  /// Constructor for creating a [Podcast] object.
+  ///
+  /// The constructor initializes a [Podcast] object with the following named parameters:
+  /// - [locked]: The locked status of the podcast.
+  /// - [funding]: The funding information of the podcast.
+  /// - [people]: The list of people associated with the podcast.
+  /// - [location]: The location information of the podcast.
+  /// - [trailers]: The list of trailers associated with the podcast.
+  /// - [license]: The license information of the podcast.
+  /// - [guid]: The GUID (Globally Unique Identifier) of the podcast.
+  /// - [value]: The value associated with the podcast.
+  /// - [medium]: The medium type of the podcast.
+  /// - [images]: The images associated with the podcast.
+  /// - [liveItems]: The list of live items associated with the podcast.
   Podcast({
     this.locked,
     this.funding,
@@ -39,6 +77,11 @@ class Podcast {
     required this.liveItems,
   });
 
+  /// Factory method to parse an [XmlElement] and create a [Podcast] object from it.
+  ///
+  /// The [element] is an XML element containing the podcast information.
+  ///
+  /// Returns the parsed [Podcast] object.
   factory Podcast.parse(XmlElement element) {
     return Podcast(
       locked: element

@@ -23,7 +23,9 @@ import 'package:webfeed_advance/util/iterable.dart';
 import 'package:webfeed_advance/util/xml.dart';
 import 'package:xml/xml.dart';
 
+/// Class representing Media RSS element with various attributes and elements.
 class Media {
+  // Attributes
   final Group? group;
   final List<Content>? contents;
   final List<Credit>? credits;
@@ -50,6 +52,7 @@ class Media {
   final Rights? rights;
   final List<Scene>? scenes;
 
+  /// Constructor for creating a [Media] object.
   Media({
     this.group,
     this.contents,
@@ -78,6 +81,7 @@ class Media {
     this.scenes,
   });
 
+  /// Factory method to parse an [XmlElement] and create a [Media] object from it.
   factory Media.parse(XmlElement element) {
     return Media(
       group: element

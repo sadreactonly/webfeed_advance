@@ -7,6 +7,7 @@ import 'package:webfeed_advance/util/iterable.dart';
 import 'package:webfeed_advance/util/xml.dart';
 import 'package:xml/xml.dart';
 
+/// Represents iTunes-specific metadata for a feed or an episode.
 class Itunes {
   final String? author;
   final String? summary;
@@ -26,6 +27,9 @@ class Itunes {
   final Duration? duration;
   final ItunesEpisodeType? episodeType;
 
+  /// Constructor for the `Itunes` class.
+  ///
+  /// Initialize the iTunes metadata properties.
   Itunes({
     this.author,
     this.summary,
@@ -46,6 +50,14 @@ class Itunes {
     this.episodeType,
   });
 
+  /// Factory method to create an `Itunes` object from an [XmlElement].
+  ///
+  /// This method parses the [element] and extracts the iTunes metadata values from it
+  /// to create an `Itunes` object and returns it.
+  ///
+  /// The [author], [summary], [explicit], [title], [subtitle], [owner], [keywords], [image], [categories],
+  /// [type], [newFeedUrl], [block], [complete], [episode], [season], [duration], and [episodeType] values are obtained
+  /// by accessing specific elements or attributes within the [element] and parsing them accordingly.
   factory Itunes.parse(XmlElement element) {
     final episodeStr =
         element.findElements('itunes:episode').firstOrNull?.innerText ?? '';
@@ -97,6 +109,13 @@ class Itunes {
     );
   }
 
+  /// Parses a duration string and converts it into a [Duration] object.
+  ///
+  /// The duration string should be in the format "HH:MM:SS" or "MM:SS".
+  /// The method parses the string, extracting the hours, minutes, and seconds,
+  /// and creates a [Duration] object accordingly.
+  ///
+  /// Returns the parsed [Duration].
   static Duration _parseDuration(String s) {
     var hours = 0;
     var minutes = 0;

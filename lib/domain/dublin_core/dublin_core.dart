@@ -2,6 +2,7 @@ import 'package:webfeed_advance/util/datetime.dart';
 import 'package:webfeed_advance/util/iterable.dart';
 import 'package:xml/xml.dart';
 
+/// Represents the Dublin Core metadata for a feed item.
 class DublinCore {
   final String? title;
   final String? description;
@@ -21,6 +22,9 @@ class DublinCore {
   final String? coverage;
   final String? rights;
 
+  /// Constructor for the `DublinCore` class.
+  ///
+  /// Initialize the Dublin Core metadata properties.
   DublinCore({
     this.title,
     this.description,
@@ -41,6 +45,10 @@ class DublinCore {
     this.rights,
   });
 
+  /// Factory method to create a `DublinCore` object from an [XmlElement].
+  ///
+  /// This method parses the [element] and extracts the Dublin Core metadata values from it
+  /// to create a `DublinCore` object and returns it.
   factory DublinCore.parse(XmlElement element) {
     return DublinCore(
       title: element.findElements('dc:title').firstOrNull?.innerText,
